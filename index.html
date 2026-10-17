@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Student Management System</h1>
+        <p>Manage student courses and academic records.</p>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <div class="card">
+                <h3>Total Students</h3>
+                <p id="totalStudents">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Courses</h3>
+                <p id="totalCourses">0</p>
+            </div>
+        </section>
+
+        <section class="student-section">
+            <h2>Register a Student</h2>
+
+            <form id="studentForm">
+                <label for="studentName">Full Name</label>
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Enter student's full name"
+                    required
+                >
+
+                <label for="studentNumber">Student Number</label>
+                <input
+                    type="text"
+                    id="studentNumber"
+                    placeholder="Enter student number"
+                    required
+                >
+
+                <label for="studentCourse">Course</label>
+                <input
+                    type="text"
+                    id="studentCourse"
+                    placeholder="Enter course name"
+                    required
+                >
+
+                <button type="submit">Add Student</button>
+            </form>
+        </section>
+
+        <section class="student-section">
+            <h2>Registered Students</h2>
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search by name or student number"
+            >
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Student Number</th>
+                            <th>Course</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentTable"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
